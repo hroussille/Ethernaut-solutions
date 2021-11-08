@@ -1,4 +1,4 @@
-# 0. Hello Ethernaut
+# 00. Hello Ethernaut
 
 This first challenge is quite simple :
 
