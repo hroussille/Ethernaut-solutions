@@ -8,7 +8,7 @@ you reduce its balance to 0.
 
 ## Target contract :
 
-```sol
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 
