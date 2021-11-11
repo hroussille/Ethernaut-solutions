@@ -59,7 +59,6 @@ The following contract can solve the challenge :
 pragma solidity 0.8.4;
 
 contract TargetCall {
-    event GasAmount(uint256);
     
     fallback() external payable {
         assert(false);
