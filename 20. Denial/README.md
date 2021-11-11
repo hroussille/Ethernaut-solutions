@@ -73,5 +73,5 @@ There is a different behaviour in versions equal and above 0.8.5 :
 
 the `assert(false)` gets compiled to : `0xFDFE` : `REVERT INVALID`. THis means that the code will revert and not assert, refunding gas and allowing execution to continue for the caller.
 
-Modifying the bytecode solves that issue but is certainly not the cleanest way to do it. See (my answer)[https://ethereum.stackexchange.com/a/113362/84305] to a related question for more informations.
+Modifying the bytecode solves that issue but is certainly not the cleanest way to do it. See [my answer](https://ethereum.stackexchange.com/a/113362/84305) to a related question for more informations.
 
