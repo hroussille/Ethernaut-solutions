@@ -92,4 +92,4 @@ contract Reentrency {
 }
 ```
 
-Just make sure to call `attack` with a high enough gas limit. When the attack is done, you can withdraw the stolen funds by calling the `withdraw`.
+Just make sure to call `attack` with a high enough gas limit and a `value` <= to your initial deposit. When the attack is done, you can withdraw the stolen funds by calling the `withdraw`.
