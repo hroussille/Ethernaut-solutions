@@ -66,7 +66,7 @@ await web3.eth.getStorageAt(contract.address, 5);
 // 0xd8e3ce9566999c1b45297e306d44eeda4e9afa62ea7c6108e93e1ba67704988f
 ```
 
-Solidity casting is pretty straight forward, when casting from `bytes32` to `bytes16` it will only select the first 16 bytes.
+Solidity casting on bytes is pretty straight forward, when casting from `bytes32` to `bytes16` it will only select the first 16 bytes.
 The value that we are looking for is : `0xd8e3ce9566999c1b45297e306d44eeda`.
 
 We can unlock the contract easily :
