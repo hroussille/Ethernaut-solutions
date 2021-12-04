@@ -91,7 +91,7 @@ await contract.codex(index);
 //   ^^^^^^^^^^^^^^^^^^^^ ^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //        UNUSED BITS   BOOLEAN           OWNER ADDRESS
 ```
-We see our boolean variable
+
 Now we can rewrite the storage slot 1 with our own address :
 
 ```js
