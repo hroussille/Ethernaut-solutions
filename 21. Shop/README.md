@@ -76,8 +76,8 @@ contract Attacker {
 
     function price() public view returns (uint256 p) {
 
-        bytes4 sig = 0xe852e741;
-        address addr = 0xCa305778dC31fc201e741812fFeC903B2E6c6E05;
+        bytes4 sig = 0xe852e741; // keccak256("isSold()")
+        address addr = 0xCa305778dC31fc201e741812fFeC903B2E6c6E05; // Change it for your instance address
 
         assembly {
             let rvalue := mload(0x40)
