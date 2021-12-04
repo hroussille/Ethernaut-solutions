@@ -88,8 +88,8 @@ Let's make sure that we have the right index :
 ```js
 await contract.codex(index);
 // 0x000000000000000000000001da5b3fb76c78b6edee6be8f11a1c31ecfb02b272
-//   ^^^^^^^^^^^^^^^^^^^^ ^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-//        UNUSED BITS   BOOLEAN           OWNER ADDRESS
+//   ^^^^^^^^^^^^^^^^^^^^  ^^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//        UNUSED BITS   BOOLEAN        OWNER ADDRESS
 ```
 
 Now we can rewrite the storage slot 1 with our own address :
