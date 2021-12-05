@@ -58,9 +58,9 @@ contract AttackerNaive {
 }
 ```
 
-But it doesn't work either as there is not enough gas... Solidity's bytecode contains many unnecessary OPCODES that just eat away the little bit of gas we were given.
+But it doesn't work either as there is not enough gas... Solidity's bytecode contains many unnecessary OPCODES that just eat away the little bit of gas we were given. Plus it may read from storage depending on the mutability modifier you put on `targetContract` setting it to `immutable` or `constant` has the same result : revert..
 
-So I went for an assembly version :
+So I went for an assembly version to have more control on the OPCODES and ensure no storage access for a lesser overall gas cost :
 
 ```solidity
 contract Attacker {
@@ -76,8 +76,8 @@ contract Attacker {
 
     function price() public view returns (uint256 p) {
 
-        bytes4 sig = 0xe852e741;
-        address addr = 0xCa305778dC31fc201e741812fFeC903B2E6c6E05;
+        bytes4 sig = 0xe852e741; // keccak256("isSold()")
+        address addr = 0xCa305778dC31fc201e741812fFeC903B2E6c6E05; // Change it for your instance address
 
         assembly {
             let rvalue := mload(0x40)
