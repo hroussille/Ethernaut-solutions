@@ -184,7 +184,7 @@ Finally, we generate a call that calls deposit followed by `innerMultiCall` (a c
 const outerMulticall = web3.eth.abi.encodeFunctionCall({name: 'multicall', type:'function', inputs:[{type:'bytes[]', name:'data'}]}, [[depositCall, innerMulticall]])
 ```
 
-We can send those nested calls through a simple tx. Remember that the contract currently holds 1 ETH and we are planning on making 2 calls to deposit, thus reusing `msg.value` once. Our `msg.value` will be counted twice, and we want that `2 * msg.value` to equal to balance of the contract, therefore, we must send 1 ETH. (If we were making 4 nested calls to deposit we could send only 0.5 ETH).
+We can send those nested calls through a simple tx. Remember that the contract currently holds 1 ETH and we are planning on making 2 calls to deposit, thus reusing `msg.value` once. Our `msg.value` will be counted twice, and we want that `2 * msg.value` to equal to balance of the contract, therefore, we must send 1 ETH.
 
 ```js
 await web3.eth.sendTransaction({from: accounts[0], to: contract.address, data:outerMulticall, value: web3.utils.toWei("1", "ether")})
