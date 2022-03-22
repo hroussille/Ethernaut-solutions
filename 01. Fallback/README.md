@@ -1,9 +1,9 @@
 # 01. Fallback
 
-You will beat this level if
+You will beat this level if :
 
-you claim ownership of the contract
-you reduce its balance to 0.
+- you claim ownership of the contract
+- you reduce its balance to 0.
 
 
 ## Target contract :
